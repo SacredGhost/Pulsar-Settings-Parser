@@ -247,7 +247,7 @@ namespace Settings.pul_Parser
 
             if (!File.Exists(oldFilePath) || !File.Exists(newFilePath) || !File.Exists(oldTrackNames) || !File.Exists(newTrackNames))
             {
-                Console.WriteLine("One of the Settings.pul or track list text files are missing\n(Name them old.pul, new.pul, old.txt, new.txt)");
+                Console.WriteLine("One of the Settings.pul is missing\n(Name them old.pul, new.pul, and if you want to be able to see track names: old.txt, new.txt)");
                 return;
             }
 
