@@ -248,6 +248,7 @@ namespace Settings.pul_Parser
             if (!File.Exists(oldFilePath) || !File.Exists(newFilePath) || !File.Exists(oldTrackNames) || !File.Exists(newTrackNames))
             {
                 Console.WriteLine("One of the Settings.pul is missing\n(Name them old.pul, new.pul, and if you want to be able to see track names: old.txt, new.txt)");
+                Console.ReadLine();
                 return;
             }
 
@@ -309,10 +310,12 @@ namespace Settings.pul_Parser
                 Array.Copy(newTrophyData, 0, combined, newBeforeTrop.Length, newTrophyData.Length);
 
                 File.WriteAllBytes("UpdatedSettings.pul", combined);
+                Console.ReadLine();
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                Console.ReadLine();
             }
         }
     }
